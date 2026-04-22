@@ -1,0 +1,20 @@
+# 【注释】：Java 编译产物，不需要提交
+target/
+
+# 【注释】：前端构建产物，不需要提交
+frontend/dist/
+
+# 【注释】：IDE 配置文件，不同人用的 IDE 不同，不需要统一
+.idea/
+.vscode/
+
+# 【注释】：操作系统生成的临时文件，不需要提交
+*.log
+*.tmp
+.DS_Store
+
+# 【注释】：Docker 容器日志，不需要提交
+docker/logs/
+
+# 【注释】：Maven 依赖包，不需要提交（Maven 会自动下载）
+.mvn/
