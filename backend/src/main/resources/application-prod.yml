@@ -1,0 +1,12 @@
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: lab-booking
+
+logging:
+  level:
+    com.aviation.labbooking: INFO
+    org.springframework: WARN
