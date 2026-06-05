@@ -1,12 +1,36 @@
-
 server:
   port: 8080
 
 spring:
   application:
     name: lab-booking
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/aviation_lab_booking?useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 6000ms
+
+# JWT配置
+jwt:
+  secret: aviation-lab-booking-jwt-secret-key-256-bit-minimum-length-requirement-for-hs256-algorithm-must-be-at-least-32-bytes
+  expiration: 86400000
 
 logging:
   level:
     com.aviation.labbooking: DEBUG
     org.springframework: INFO
+    org.hibernate.SQL: DEBUG
